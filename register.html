@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>奶牛妈妈</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" media="screen" title="no title">
+  <style media="screen">
+  html{
+    font-size:10px;
+  }
+    @media screen and (width: 320px) {
+      html{
+        font-size:8px;
+      }
+      .input-send{
+        top: -30% !important;
+        right: 8% !important;
+      }
+    }
+    @media screen and (width: 375px) {
+
+      .input-send{
+        top: -28% !important;
+        right: 6% !important;
+      }
+    }
+    @media screen and (width: 414px) {
+
+      .input-send{
+        top: -30% !important;
+        right: 6% !important;
+      }
+    }
+    @media screen and (width: 768px) {
+      .container input{
+        margin-top: -2% !important;
+      }
+      .input-send{
+        top: -24% !important;
+        right: 3% !important;
+      }
+    }
+    .container{
+      margin: auto 7%;
+      font-size: 1.5rem;
+      color: #666;
+      max-width: 90%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .container>img{
+      margin: 30% 10% 15%;
+      width: 80%;
+      height: 20%;
+    }
+    .container label{
+      width: 25%;
+      text-align: right;
+    }
+    .container .form-group {
+      height: 3.5rem;
+      padding: 1.7rem auto;
+    }
+    .form-group .col-sm-9{
+      float: right;
+      width: 73%;
+      height: 100%;
+    }
+    .container input{
+      height: 3.5rem;
+      margin-top: -5%;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      background-color: #ececec;
+    }
+    .container .row{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .container .btn{
+      background-color: #7bc8c0;
+      color: #fff;
+      height: 100%;
+      width: 90%;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+      margin: 6%;
+    }
+    .container .btn:active{
+      background-color: #7bc8b0;
+    }
+    .div-send{
+      position: relative;
+      /*height: 10rem;*/
+    }
+    .input-send{
+      position: absolute;
+      top: -23%;
+      right: 5%;
+      border-radius: 0 0.5rem 0.5rem 0;
+      height: 97%;
+      line-height: 3.5rem;
+      text-align: center;
+      color: #fff;
+      width: 8rem;
+      background-color: #7bc8c0;
+    }
+    .shadow{
+      box-shadow: 0 0 5px red;
+    }
+    .control-label{
+      padding-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <img src="./logo.png" alt="" />
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="inputTel" class="col-sm-3 col-xm-3 control-label">手机号码</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="tel" class="form-control input-lg" id="inputTel" placeholder="" name="tel" value="">
+        </div>
+      </div>
+      <div class="form-group  div-send">
+        <label for="inputYZM" class="col-sm-3 col-xm-3 control-label">验证码</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="text" class="form-control" id="inputYZM" placeholder="" name="yzm" value="">
+          <div class="input-send" id="send_massage" onclick="message()">发送验证码</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputUser" class="col-sm-3 col-xm-3 control-label">姓名</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="text" class="form-control" id="inputUser" placeholder="" name="user" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAge" class="col-sm-3 col-xm-3 control-label">年龄</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="number" class="form-control" id="inputAge" placeholder="" name="age" value="" step="1" min="15" max="60" value=''>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputYCQ" class="col-sm-3 col-xm-3 control-label">预产期</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="date" class="form-control" id="inputYCQ" placeholder="" name="YCQ" min="2010-08-14" max="2011-08-14" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputYiyuan" class="col-sm-3 col-xm-3 control-label">建档医院</label>
+        <div class="col-sm-9 col-xm-9">
+          <input type="text" class="form-control" id="inputYiyuan" placeholder="" name="Yiyuan" value="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <button type="button" class="btn col-sm-12 col-xm-12" id="register">注册</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+</body>
+<script src="./jquery-1.11.1.min.js" charset="utf-8"></script>
+<script src="register.js" charset="utf-8"></script>
+</html>
